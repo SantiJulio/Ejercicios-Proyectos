@@ -1,0 +1,32 @@
+{% extends 'baseTemplate.html' %}
+
+{% block header %}Consultar Estado de Trabajo{% endblock %}
+
+{% block content %}
+    <h2>Consultar mi Trabajo</h2>
+
+    <!-- Formulario para ingresar criterios de búsqueda -->
+     <form action="{{ url_for('consultar_trabajo') }}" method="POST">
+        <fieldset>
+            <legend>Criterios de Busqueda</legend>
+
+            <label for="id_trabajo">Numero Asignado (ID de  trabajo):</label><br>
+            <input type="number" id="id_trabajo" name="id_trabajo" required><br><br>
+
+            <label for="correoAutor">Correo Electronico del Autor:</label><br>
+            <input type="email" id="correoAutor" name="correoAutor" required><br><br>
+        </fieldset>
+        <br>
+        <button type="submit">Consultar Estado</button>
+     </form>
+
+    {% if trabajo %}
+        <div style="background-color: #fff; padding: 20px; border-radius: 5px; border: 2px solid #377ba8; margin-top: 30px;">
+            <h3>Detalles de la Investigación Encontrada:</h3>
+            <p><strong>Título:</strong> {{ trabajo.titulo }}</p>
+            <p><strong>Área Temática:</strong> {{ trabajo.area }}</p>
+            <p><strong>Fecha de Envío:</strong> {{ trabajo.fecha_envio.strftime('%d/%m/%Y %H:%M') }}</p>
+            <p><strong>Estado Actual:</strong> <span style="color: #377ba8; font-weight: bold; font-size: 1.1em;">{{ trabajo.estado }}</span></p>
+        </div>
+    {% endif %}     
+{% endblock %}

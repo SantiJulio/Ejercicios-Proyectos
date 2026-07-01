@@ -1,0 +1,48 @@
+{% extends 'baseTemplate.html' %}
+
+{% block header %}Enviar Trabajo - Congreso{% endblock %}
+
+{% block content %}
+    <h2>Enviar Nuevo Trabajo de Investigacion</h2>
+
+    <form action="{{ url_for('enviar_trabajo') }}" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos del Trabajo</legend>
+
+            <label for="titulo">Titulo del Trabajo:</label><br>
+            <input type="text" id='titulo' name="titulo" required><br><br>
+
+            <label for="resumen">Resumen / Abstract:</label><br>
+            <textarea id="resumen" name="resumen" placeholder="Escriba aqui el Resumen..." required></textarea>
+
+            <label for="areaTrabajo">Area Tematica correspondiente:</label><br>
+            <select id="areaTrabajo" name="areaTrabajo" required>
+                <option value="" disabled selected>-- Selecciona una opcion --</option>
+                <option value="EF"> Ecofisiologia (EF)</option>
+                <option value="ES"> Ecosistemas (ES)</option>
+                <option value="AE"> Agroecologia (AE)</option>
+                <option value="RN"> Recursos Naturales (RN)</option>
+                <option value="CA"> Comunicacion Ambiental (CA)</option>
+            </select>
+            <br>
+            <label for="archivo">Adjuntar Documento del Trabajo (.pdf, .docx):</label><br>
+            <input type="file" id="archivo" name="archivo" required><br>
+        </fieldset>
+
+        <fieldset style="margin-top: 20px;">
+            <legend>Datos del Autor Principal</legend>
+
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+            
+            <label for="correoAutor">Correo Electrónico:</label><br>
+            <input type="email" id="correoAutor" name="correoAutor" required><br><br>
+        </fieldset>
+
+        <br>
+        <button type="submit">Enviar Trabajo</button>
+    </form>
+    {% endblock %}

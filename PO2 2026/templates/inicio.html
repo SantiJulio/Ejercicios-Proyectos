@@ -1,0 +1,17 @@
+{% extends 'baseTemplate.html' %}
+
+{% block header %}Inicio - Congreso de Investigacion{% endblock %}  Inyecta el título de la pestaña del navegador para esta página en particular.
+
+{% block content %}
+    <div style="text-align: center; margin-top: 30px;">
+        <h2>!Bienvenido al Sistema de Gestion de Trabajos</h2>
+        <p>Utilice la barra de navegacion superior para acceder a las distitnas secciones del sistema.</p>
+    </div>
+
+    <!-- Si el sistema envía algún mensaje de éxito (como el ID del trabajo), se muestra acá -->
+    {% if mensaje %}
+        <div style= "background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin-top: 20px; font-weight: bold; text-align: center;">
+            {{ mensaje }}
+        </div>
+    {% endif %}
+{% endblock %}

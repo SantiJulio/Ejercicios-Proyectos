@@ -1,0 +1,12 @@
+{% extends 'baseTemplate.html' %}
+
+{% block header %}Aviso del Sistema{% endblock %}
+
+{% block content %}
+    <div style ="background-color: #fff; padding: 20px; border: 1px solid #377ba8; border-radius: 5px; margin-top: 30px; text-align: center;">
+        <h3>Notificacion:</h3>
+        <p style="font-size: 1.2em; font-weight: bold; color: #464;">{{ mensaje }}</p> 
+        <br>
+        <a href="{{ url_for('inicio') }}" style="color: #377ba8; font-weight: bold;">Volver al Inicio</a>
+    </div>
+{% endblock %}
