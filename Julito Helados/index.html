@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julito Helados</title>
+    <link rel="icon" href="images/icon.png" type="icon">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  </head>
+  <body id="inicio">
+    <!-- Navbar -->
+    <section class="section-navbar">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #C1E1EC;">
+       <div class="container-fluid">
+        
+        <!-- Marca --> 
+        <a class="navbar-brand fw-bold" href="#" style="font-family: 'Pacifico', cursive; font-size: 1.8rem;">Julito Helados</a>
+        
+        <!-- Botón Hamburguesa -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item navite border-bottom active">
+              <a class="nav-link d-flex justify-content-center" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item border-bottom navite">
+              <a class="nav-link d-flex justify-content-center" href="pages/Sabores/Sabores.html">Sabores</a>
+            </li>
+            <li class="nav-item border-bottom navite">
+              <a class="nav-link d-flex justify-content-center" href="pages/Trabaja con Nosotros/Trabaja.html">Trabaja con Nosotros</a>
+            </li>
+            <li class="nav-item border-bottom navite">
+              <a class="nav-link d-flex justify-content-center" href="pages/Franquicia/Franquicia.html">Franquicia</a>
+            </li>
+            <li class="nav-item navite">
+              <a class="nav-link d-flex justify-content-center" href="pages/Nosotros/Nosotros.html">Nosotros</a>
+            </li>
+          </ul>
+        </div>
+       </div> 
+      </nav>
+    </section>
+    <!-- Fin Navbar -->
+
+    <!-- Main Content -->
+    <main class="p-0 m-0">
+
+      <!-- Carrusel Principal -->
+      <section style="background-color: #FADADD;" class="py-5 mb-2">
+        <div class="container">
+          <div id="heladosCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+            <div class="carousel-inner">
+        
+              <!-- Chocolate Dubai -->
+              <div class="carousel-item active">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="images/Imagen1_ChocolateDubai.webp" class="img-fluid rounded" alt="Chocolate Dubai" style="max-width: 80%;">
+                  </div>
+                  <div class="col-md-6">
+                    <p class="text-muted mb-1">¿Ya lo probaste?</p>
+                    <h3 class="font-weight-bold">Chocolate Dubai</h3>
+                    <p>
+                      Helado intenso de chocolate semi amargo, con notas especiadas de cardamomo y vainilla, 
+                      bañado en hilos de chocolate belga y trozos crocantes de brownie artesanal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nueva Sucursal -->
+              <div class="carousel-item">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="images/Imagen2_NuevaSucursal.webp" class="img-fluid rounded" alt="Nueva Sucursal" style="max-width: 80%;">
+                  </div>
+                  <div class="col-md-6">
+                    <p class="text-muted mb-1">¿Ya lo conoces?</p>
+                    <h3 class="font-weight-bold">Nueva Sucursal</h3>
+                    <p>
+                      Abrimos las puertas de nuestro nuevo local para seguir compartiendo el helado que más te gusta. 
+                      Ya podés visitarnos entre Avenida Libertador y Las Palmas Nte.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Buscamos gente como vos -->
+              <div class="carousel-item">
+                <div class="row align-items-center">
+                  <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="images/Imagen3_TrabajaconNosotros.png" class="img-fluid rounded" alt="Trabaja con nosotros" style="max-width: 80%;">
+                  </div>
+                  <div class="col-md-6">
+                    <p class="text-muted mb-1">¿Quieres sumarte?</p>
+                    <h3 class="font-weight-bold">Buscamos gente como vos</h3>
+                    <p>
+                      Estamos buscando personas apasionadas por el helado, con ganas de crecer y sumar buena energía a nuestro equipo.
+                    </p>
+                    <a href="pages/Trabaja con Nosotros/Trabaja.html" class="boton-julito mt-2">Únetenos</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Controles -->
+            <a class="carousel-control-prev" href="#heladosCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#heladosCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    
+    <!-- Sección Dulzura -->
+    <section class="py-5 mb-2" style="background-color: #FADADD;">
+      <div class="container px-3">
+        <h2 class="fw-bold mb-3 text-start" style="font-family: 'Segoe UI', sans-serif; font-size: 2rem;">
+          Dulzura que inspira sonrisas
+        </h2>
+        <p class="text-start" style="max-width: 800px; font-size: 1rem;">
+          Desde el primer cucurucho, nuestro objetivo ha sido mucho más que hacer helado: queremos compartir alegría en cada cucharada.
+          Usamos ingredientes de la más alta calidad, pero lo más importante es que cada creación nace con amor y dedicación.<br>
+          Porque en Julito no solo servimos helado... ¡servimos felicidad en su forma más dulce!
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección Sabores -->
+    <section class="seccion-julito">
+      <div class="container px-3">
+        <div class="row align-items-center">
+          <!-- Texto -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h2 class="fw-bold mb-3" style="font-size: 2rem;">Sabores</h2>
+            <p style="font-size: 1rem;">
+              Cada uno de nuestros helados nace del amor por lo que hacemos.<br>
+              Usamos ingredientes seleccionados y métodos artesanales para que cada sabor refleje la dedicación con la que trabajamos, todos los días.
+            </p>
+            <a href="pages/Sabores/Sabores.html" class="boton-julito mt-2">Conocé más</a>
+          </div>
+
+          <!-- Imagen Cabsha con recuadro -->
+          <div class="col-md-6 text-center">
+            <div class="cabsha-container">
+              <img src="images/Imagen4_ChocolateCabsha.jpg" alt="Cabsha" class="cabsha-image img-fluid">
+              <div class="cabsha-label">Cabsha</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Trabajá con Nosotros -->
+    <section class="seccion-julito">
+      <div class="container px-3">
+        <div class="row align-items-center">
+          <!-- Texto -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h2 class="fw-bold mb-3" style="font-size: 2rem;">Trabaja con Nosotros</h2>
+            <p>
+              ¿Sos buena onda y te copa el helado? ¡Estamos buscando gente como vos! ¡Súmate a nuestro equipo y hacé que cada día sea más dulce!
+            </p>
+            <a href="pages/Trabaja con Nosotros/Trabaja.html" class="boton-julito mt-2">Únetenos</a>
+          </div>
+
+          <!-- Imagen -->
+          <div class="col-md-6 text-center">
+            <img src="images/Imagen5_TrabajaconNosotros.jpg" alt="Trabaja con nosotros" class="trabaja-image img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección Distinciones -->
+    <section class="py-5 mb-2" style="background-color: #FADADD;">
+      <div class="container">
+        <!-- Título -->
+        <h2 class="fw-bold mb-4 text-start" style="font-family: 'Segoe UI', sans-serif; font-size: 2rem;">Distinciones</h2>
+
+        <!-- Tarjetas -->
+        <div class="row justify-content-center g-4 text-center">
+          <!-- Distinción 1 -->
+          <div class="col-md-4 col-10">
+            <div class="distincion-card p-4">
+              <img src="icons/Medalla 1.svg" alt="Medalla Amarilla" class="distincion-icon mb-3">
+              <p class="mb-0">Competencia Provincial 2022</p>
+            </div>
+          </div>
+
+          <!-- Distinción 2 -->
+          <div class="col-md-4 col-10">
+            <div class="distincion-card p-4">
+              <img src="icons/Medalla 2.svg" alt="Medalla Celeste" class="distincion-icon mb-3">
+              <p class="mb-0">Copa Heladería de Cuyo 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón al centro -->
+        <div class="text-center mt-4">
+          <a href="pages/Nosotros/Nosotros.html" class="boton-julito">Nuestra Historia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Nuestras Sucursales -->
+    <section class="py-5 mb-2" style="background-color: #FADADD;">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-3" style="font-family: 'Segoe UI', sans-serif; font-size: 2rem;">Nuestras Sucursales</h2>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1rem;">
+          Visítanos en cualquiera de nuestros locales para disfrutar de tu momento dulce.
+        </p>
+
+        <div class="row justify-content-center mt-4">
+          <!-- Sucursal 1 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="sucursal-container">
+              <img src="images/Mapa 1.png" alt="Sucursal Rivadavia" class="sucursal-image">
+              <div class="sucursal-label">
+                <strong>Rivadavia</strong><br>
+                Av. Libertador 1650 (o)
+              </div>
+            </div>
+          </div>
+
+          <!-- Sucursal 2 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="sucursal-container">
+              <img src="images/Mapa 2.png" alt="Sucursal Capital" class="sucursal-image">
+              <div class="sucursal-label">
+                <strong>Capital</strong><br>
+                Av. Rioja 1236 (s)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="text-center py-5 position-relative" style="background:#C1E1EC;">
+      <!-- Botón subir (flecha) -->
+      <a href="#inicio" class="boton-subir">
+        <img src="icons/Subir.svg" alt="Subir" width="22" height="22">
+      </a>
+
+      <!-- Marca -->
+      <a href="index.html" class="footer-title mb-3 d-block" style="font-family:'Pacifico', cursive; font-size: 2rem; color: inherit; text-decoration: none;">Julito</a>
+      <p class="mb-4">¡Helado hoy, felicidad asegurada!</p>
+
+      <!-- Iconos sociales -->
+      <div class="d-flex justify-content-center mb-4">
+        <img src="icons/TikTok.svg"  alt="TikTok"    class="social-icon">
+        <img src="icons/Facebook.svg" alt="Facebook"  class="social-icon">
+        <img src="icons/Instagram.svg" alt="Instagram" class="social-icon">
+      </div>
+
+      <!-- Información -->
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <!-- contacto -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5 class="fw-bold mb-2">Contacto</h5>
+            <img src="icons/Telefono.svg" alt="" width="18" class="me-2">
+            0264-566‑2001
+          </div>
+
+          <!-- horario -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5 class="fw-bold mb-2">Horario</h5>
+            <p class="mb-1">Lunes a Domingo:</p>
+            <p class="mb-0">9 am – 23 pm</p>
+          </div>
+
+          <!-- enlaces -->
+          <div class="col-md-4">
+            <h5 class="fw-bold mb-2">Enlaces Rápidos</h5>
+            <ul class="list-unstyled ps-0">
+              <li><a href="pages/Sabores/Sabores.html" class="enlace-footer">Sabores</a></li>
+              <li><a href="pages/Trabaja con Nosotros/Trabaja.html" class="enlace-footer">Trabajá con Nosotros</a></li>
+              <li><a href="pages/Franquicia/Franquicia.html" class="enlace-footer">Franquicia</a></li>
+              <li><a href="pages/Nosotros/Nosotros.html" class="enlace-footer">Nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ------------- -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>  

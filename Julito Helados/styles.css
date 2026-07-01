@@ -1,0 +1,241 @@
+.navbar-nav {
+  gap: 30px; 
+}
+
+.nav-item {
+  padding: 0 10px; 
+}
+
+.navbar-nav .nav-item {
+  border-bottom: none !important;
+}
+ 
+/* Reubicar controles */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  left: -40px; 
+}
+
+.carousel-control-next {
+  right: -40px; 
+}
+
+/* Tipografía general */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Secciones Sabores y Trabaja */
+.seccion-julito {
+  background-color: #FADADD;
+  padding: 3rem 0; 
+  border-bottom: 10px solid white;
+}
+
+/* Imagen Cabsha con recuadro blur */
+.cabsha-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 350px;
+  width: 100%;
+}
+
+.cabsha-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.cabsha-label {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px 100px;
+  border-radius: 15px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .cabsha-label {
+    font-size: 0.9rem;
+    padding: 6px 18px;
+  }
+}
+
+/* Botón Julito */
+.boton-julito {
+  background-color: #FFF3B0;
+  color: #333;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; 
+  padding: 10px 24px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.boton-julito:hover {
+  background-color: #ffe97a;
+  color: #333;
+  text-decoration: none;
+}
+
+.trabaja-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Distincion */
+.distincion-card {
+  background-color: #FFF9F2;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #333;
+  width: 100%;
+  max-width: 220px; 
+  height: 220px;     
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.distincion-icon {
+  width: 80px;
+  height: auto;
+}
+
+/* Sucursal */
+.sucursal-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 350px; 
+  height: 300px;
+  width: 100%;
+  background-color: white;
+}
+
+.sucursal-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sucursal-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Footer */
+.footer-title {
+  margin-bottom: 8px;
+}
+
+.enlace-footer {
+  color: #333;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.enlace-footer:hover {
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  footer .row {
+    text-align: center;
+  }
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 14px;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Flecha subir en el footer */
+.boton-subir {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.boton-subir:hover {
+  transform: translateY(-4px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Espaciado vertical en móvil */
+.distincion-card,
+.seccion-trabaja .form-trabaja,
+.seccion-franquicia .form-franquicia {
+  margin-bottom: 16px !important;
+}
+
+@media (min-width: 768px) {
+  .distincion-card,
+  .seccion-trabaja .form-trabaja,
+  .seccion-franquicia .form-franquicia {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Espaciado vertical en móvil */
+@media (max-width: 768px) {
+  .row {
+    gap: 16px; /* separa las columnas cuando se apilan */
+  }
+}

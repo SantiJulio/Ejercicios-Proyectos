@@ -1,0 +1,34 @@
+/* SECCIÓN NOSOTROS */
+/* Sección 1 */
+.seccion-nosotros {
+  background-color: #FADADD;
+  padding: 3rem 0;
+}
+
+.img-nosotros {
+  width: 100%;
+  max-width: 450px; 
+  height: auto;
+}
+
+/* Sección 2 */
+.seccion-nosotros2 {
+  background-color: #FADADD; 
+}
+
+.titulo-nosotros {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.imagen-historia,
+.imagen-creemos,
+.imagen-pre1,
+.imagen-pre2 {
+  width: 100%;
+  max-width: 450px; 
+  height: auto;
+}

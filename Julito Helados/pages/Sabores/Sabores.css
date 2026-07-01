@@ -1,0 +1,162 @@
+/* Seccion 1 */
+.sabores-nuevo-lanzamiento {
+  background-color: #FADADD;
+  padding: 60px 0;
+}
+
+.lanzamiento-label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sabores-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.sabores-descripcion {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.imagen-cabsha {
+    border-radius: 25px;
+}
+
+/* Seccion 2 */
+.sabores-creaciones {
+  background-color: #FADADD;
+  padding: 3rem 1rem;
+}
+
+.titulo-creaciones {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Scroll horizontal */
+.scroll-horizontal {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  scroll-snap-type: x mandatory;
+}
+
+/* Card de sabor */
+.card-sabor {
+  flex: 0 0 auto;
+  width: 450px; 
+  height: 400px;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-sabor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nombre del sabor (superpuesto abajo) */
+.nombre-sabor {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.scroll-horizontal {
+  cursor: grab;
+}
+.scroll-horizontal.active {
+  cursor: grabbing;
+}
+
+/* Oculta la barra de scroll horizontal */
+.scroll-horizontal {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.scroll-horizontal::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Edge */
+}
+
+/* Desactivar Selección */
+.no-select {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+@media (max-width: 576px) {
+  .card-sabor {
+    width: 100%;        /* Ocupar todo el ancho de la pantalla */
+    height: auto;       /* Altura automática según proporción */
+    aspect-ratio: 4 / 3; /* Mantener proporción; puedes ajustar */
+  }
+
+  .card-sabor img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Seccion 3 */
+.carrusel-sabores {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #FADADD;
+}
+
+.titulo-carrusel {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Contenedor carrusel tipo fade */
+.carrusel-fade {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 1066 / 720; 
+  margin: 0 auto;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-fade img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 25px;
+}
+
+.carrusel-fade img.activo {
+  opacity: 1;
+  z-index: 2;
+}

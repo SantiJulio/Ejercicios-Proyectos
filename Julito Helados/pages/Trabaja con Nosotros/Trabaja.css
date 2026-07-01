@@ -1,0 +1,47 @@
+/* SECCIÓN TRABAJA CON NOSOTROS */
+.seccion-trabaja {
+  background-color: #FADADD;
+  padding: 3rem 0;
+}
+
+.img-trabajo {
+  width: 100%;
+  max-width: 450px; 
+  height: auto;
+}
+
+.form-trabaja {
+  background-color: #FFF;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 700px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-trabaja input {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+}
+
+.form-trabaja h5 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.form-trabaja .btn {
+  background-color: #FFF3B0;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  width: 100px;
+  margin-top: 1rem;
+}
+
+.form-trabaja .btn:hover {
+  background-color: #ffe97a;
+}

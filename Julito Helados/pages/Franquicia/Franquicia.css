@@ -1,0 +1,39 @@
+/* Sección 1 */
+.seccion-franquicia {
+  background-color: #FADADD !important;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.fondo-rosa {
+  background-color: #FADADD;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Sección 2 */
+/* FORMULARIO */
+.form-franquicia {
+  background-color: #FFF;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-franquicia input {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.form-franquicia .btn {
+  background-color: #FFF3B0;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+}
+
+.form-franquicia .btn:hover {
+  background-color: #ffe97a;
+}
