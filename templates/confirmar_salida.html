@@ -1,0 +1,15 @@
+{% extends "base_template.html" %}
+{% block title %}Confirmar Salida{% endblock %}
+{% block content %}
+    <h1>Confirmar Salida</h1>
+
+    <p><strong>Trabajador:</strong> {{ trabajador.nombre }} {{ trabajador.apellido }}</p>
+    <p><strong>Dependencia:</strong> {{ registro.dependencia }}</p>
+    <p><strong>Fecha:</strong> {{ registro.fecha }}</p>
+    <p><strong>Hora de entrada:</strong> {{ registro.horaentrada }}</p>
+
+    <form method="post" action="{{ url_for('confirmar_salida') }}">
+        <input type="hidden" name="registro_id" value="{{ registro.id }}">
+        <input type="submit" value="Confirmar Salida">
+    </form>
+{% endblock %}
