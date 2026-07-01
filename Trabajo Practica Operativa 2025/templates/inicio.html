@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Aplicacion</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    </head>
+    <body>
+        <h1>Registro de Horario</h1>
+        <ul>
+            <li> <a href = "{{ url_for('registrar_entrada') }}">Registrar Entrada</a></li><br>
+            <li> <a href = "{{ url_for('registrar_salida') }}">Registrar Salida</a></li><br>
+            <li> <a href = "{{ url_for('consultar_registros') }}">Consutar Registros</a></li><br>
+            <li> <a href = "{{ url_for('informe_general') }}">Informe General</a></li><br>
+        </ul>
+    </body>
+</html>

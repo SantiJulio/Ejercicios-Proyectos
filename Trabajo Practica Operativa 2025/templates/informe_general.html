@@ -1,0 +1,37 @@
+{% extends "base_template.html" %}
+{% block title %}Informe General{% endblock %}
+{% block content %}
+<h1>Informe General de Horas Trabajadas</h1>
+
+<form method="post">
+    <label>Legajo Administrativo:</label><br>
+    <input type="text" name="legajo" required><br><br>
+
+    <label>DNI (últimos 4 dígitos):</label><br>
+    <input type="text" name="dni4" maxlength="4" required><br><br>
+
+    <label>Fecha Inicio:</label><br>
+    <input type="date" name="fecha_inicio" required><br><br>
+
+    <label>Fecha Fin:</label><br>
+    <input type="date" name="fecha_fin" required><br><br>
+
+    <label>Función:</label><br>
+    <select name="funcion" required>
+        <option value="TODOS">Todas</option>
+        <option value="DO">Docente</option>
+        <option value="AD">Administrativo</option>
+        <option value="TE">Técnico</option>
+    </select><br><br>
+
+    <label>Dependencia:</label><br>
+    <select name="dependencia" required>
+        <option value="TODOS">Todas</option>
+        <option value="D01">Edificio Central</option>
+        <option value="D02">Talleres</option>
+        <option value="D03">Centro Deportivo</option>
+    </select><br><br>
+
+    <input type="submit" value="Generar Informe">
+</form>
+{% endblock %}

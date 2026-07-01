@@ -1,0 +1,32 @@
+{% extends "base_template.html" %}
+{% block title %}Resultados Informe General{% endblock %}
+{% block content %}
+<h1>Resultados del Informe</h1>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Apellido</th>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Hora Entrada</th>
+        <th>Hora Salida</th>
+        <th>Horas Trabajadas</th>
+    </tr>
+    {% for r in registros %}
+    <tr>
+        <td>{{ r.trabajador.apellido }}</td>
+        <td>{{ r.trabajador.nombre }}</td>
+        <td>{{ r.fecha }}</td>
+        <td>{{ r.horaentrada }}</td>
+        <td>{{ r.horasalida if r.horasalida else "No registrada" }}</td>
+        <td>
+            {% if r.horas_trabajadas is not none %}
+                {{ r.horas_trabajadas }} hs
+            {% else %}
+                -
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
