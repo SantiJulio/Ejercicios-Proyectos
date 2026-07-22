@@ -1,8 +1,0 @@
-DNI,IdCurso,Descripcion,FechaInscripcion,Estado,Arancel,PorcentajeBeca
-12345678,101,Python Inicial,2026-05-01,None,50000,75
-12345678,102,Java POO,2026-05-03,None,60000,50
-23456789,101,Python Inicial,2026-05-02,None,50000,75
-34567890,103,Base de Datos,2026-05-04,None,55000,50
-45678901,104,Desarrollo Web,2026-05-05,None,70000,75
-56789012,101,Python Inicial,2026-05-06,None,50000,50
-12345678,101,Python Inicial,2026-05-07,None,50000,75
