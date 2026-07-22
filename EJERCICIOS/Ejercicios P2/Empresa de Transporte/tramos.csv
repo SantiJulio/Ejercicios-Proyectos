@@ -1,0 +1,15 @@
+Ciudad_Origen;Ciudad_Destino;Distancia;Patente
+San Juan;Mendoza;444;AA111AA
+San Juan;La Rioja;477;BB222BB
+San Juan;Cordoba;700;CC333CC
+Mendoza;San Luis;250;DD444DD
+San Juan;Buenos Aires;1100;EE555EE
+Cordoba;Rosario;400;FF666FF
+San Luis;Mendoza;260;GG777GG
+La Rioja;Catamarca;150;HH888HH
+San Juan;San Luis;330;II999II
+Mendoza;Cordoba;600;JJ000JJ
+San Juan;Jachal;160;AA111AA
+San Juan;Calingasta;180;AA111AA
+Cordoba;Villa Maria;140;CC333CC
+Rosario;Buenos Aires;300;FF666FF
