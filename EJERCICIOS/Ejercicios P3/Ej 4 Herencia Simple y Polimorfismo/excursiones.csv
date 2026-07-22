@@ -1,0 +1,5 @@
+tipo,nombre,destino,precio_base,km_recorrido,incluye_almuerzo,duracion_horas,max_pasajeros
+Terrestre,City Tour,Buenos Aires,10000,50,True,,
+Terrestre,Ruta del Vino,Mendoza,20000,300,False,,
+Nautica,Paseo en Catamaran,Delta del Tigre,15000,,,2.5,30
+Nautica,Excursion Isla,Mar del Plata,18000,,,4,50

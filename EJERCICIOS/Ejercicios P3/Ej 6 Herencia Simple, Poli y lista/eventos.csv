@@ -1,0 +1,4 @@
+tipo,codigo,titulo,institucion,fecha,max_asistentes,cant_conferencias,tematica,duracion,responsable,actividades,coordinador
+Congreso,C01,Inteligencia Artificial,UNSJ,2025-08-12,300,5,,,,,
+Seminario,S01,Energias Renovables,UTN,2025-09-15,150,,Sustentabilidad,8,Dr. Perez,,
+Taller,T01,Robotica Educativa,UCC,2025-10-20,50,,,,,4,Ana Gomez

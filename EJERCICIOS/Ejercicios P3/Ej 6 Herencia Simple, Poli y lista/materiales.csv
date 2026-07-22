@@ -1,0 +1,4 @@
+codigo_taller,nombre,cantidad,costo_estimado
+T01,Kit Arduino,20,15000
+T01,Sensores Ultrasonicos,20,5000
+T01,Cables Dupont,50,2000

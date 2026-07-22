@@ -1,0 +1,9 @@
+id_clinica;numero_consultorio;piso;especialidad;costo_diario;estado
+1;101;1;Cardiologia;1500.50;Libre
+1;301;3;Clinica Medica;1100.00;Mantenimiento
+1;201;2;Traumatologia;1800.00;Libre
+1;102;1;Pediatria;1200.00;Ocupado
+2;13;1;Clinica Medica;1250.00;Ocupado
+2;10;1;Cardiologia;1600.00;Libre
+2;20;2;Pediatria;1300.00;Mantenimiento
+2;12;1;Traumatologia;1750.00;Libre
