@@ -1,0 +1,7 @@
+nombre,fecha_funcion,precio_base,tipo,director,duracion_min,banda_artista,cantidad_musicos
+Hamlet,2025-07-10,8000,ObraTeatro,Ana Pérez,120,,
+La Casa de Bernarda Alba,2025-07-15,7000,ObraTeatro,Carlos Gómez,95,,
+Rock Fest,2025-08-01,9000,Concierto,,,Los Andinos,5
+Jazz Night,2025-08-12,8500,Concierto,,,Blue Quartet,4
+Sueño de una Noche,2025-09-05,7500,ObraTeatro,Laura Díaz,110,,
+Metal Live,2025-09-20,10000,Concierto,,,Thunder Band,8

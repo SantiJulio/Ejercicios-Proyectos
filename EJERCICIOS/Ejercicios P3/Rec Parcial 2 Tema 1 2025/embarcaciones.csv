@@ -1,0 +1,7 @@
+nombre,tipo,eslora,anio_fabricacion,disponible,cantidad_dias,costo_diario,velas,hp
+Velero Azul,Velero,12.5,2018,0,5,200000,3,
+Viento Sur,Velero,10.0,2021,0,7,200000,2,
+Luna Marina,Velero,14.2,2016,1,3,200000,4,
+Lancha Rápida,Lancha,8.5,2022,0,4,300000,,150
+Costa Norte,Lancha,9.0,2019,1,6,300000,,200
+Mar Profundo,Lancha,11.3,2020,0,2,300000,,175

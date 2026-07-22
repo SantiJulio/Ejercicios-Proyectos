@@ -1,0 +1,6 @@
+nombre,descripcion,codigo_materia
+Variables,Tipos de datos,MAT01
+Funciones,Funciones en Python,MAT01
+Herencia,Herencia simple y multiple,MAT02
+Polimorfismo,Sobrescritura de metodos,MAT02
+Modelo Relacional,Tablas y relaciones,MAT03

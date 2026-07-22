@@ -1,0 +1,7 @@
+Tipo,ID,Marca,Modelo,Anio,Precio,Potencia,Traccion,Capacidad,Cabezal
+T,1,John Deere,6120M,2022,25000,120,Doble,,
+T,2,New Holland,TT75,2021,18000,75,Simple,,
+T,3,Massey Ferguson,4707,2020,22000,95,Doble,,
+C,4,Case IH,Axial Flow 5150,2023,45000,,,8500,Triguero
+C,5,John Deere,S550,2021,52000,,,10000,Maicero
+C,6,New Holland,CR7.90,2022,60000,,,12000,Maicero

@@ -1,0 +1,7 @@
+tipo,codigo,nombre,precio_base,descripcion,stock,url_imagen,porcentaje_descuento,envio_gratis,costo_envio,direccion_tienda,tasa_impuesto
+Online,P001,Mouse Gamer,25000,Mouse RGB 7200 DPI,15,https://img.com/mouse.jpg,15,True,0,,
+Online,P002,Teclado Mecánico,45000,Switch Blue,8,https://img.com/teclado.jpg,10,False,3500,,
+Online,P003,Auriculares,30000,Audio 7.1,20,https://img.com/auriculares.jpg,20,True,0,,
+Fisica,P004,Monitor 24,180000,Full HD IPS,5,,,,,Sucursal Centro,21
+Fisica,P005,Silla Gamer,220000,Ergonómica,3,,,,,Sucursal Norte,21
+Fisica,P006,Webcam HD,40000,1080p USB,10,,,,,Sucursal Sur,21
