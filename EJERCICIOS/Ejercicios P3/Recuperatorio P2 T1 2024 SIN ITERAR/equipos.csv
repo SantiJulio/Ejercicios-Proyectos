@@ -1,0 +1,11 @@
+tipo;marca;modelo;anio;combustible;potencia;capacidad_carga;tarifa_diaria;dias_alquiler;tipo_maquinaria;peso;tipo_herramienta
+M;Caterpillar;320D;2020;Diesel;150;20;50000;5;Excavadora;22;
+M;Komatsu;D65;2018;Diesel;205;18;65000;3;Bulldozer;19;
+M;Liebherr;LTM1050;2022;Diesel;300;50;120000;2;Grua;36;
+M;Bobcat;S650;2021;Diesel;74;3;30000;7;Minicargadora;4;
+E;Bosch;GBH2-26;2023;;800;;7000;4;;;Bateria
+E;Makita;HR2470;2022;;780;;6500;6;;;Cable
+E;DeWalt;DWE575;2021;;1600;;9000;2;;;Cable
+E;Black+Decker;BCD704;2024;;500;;5500;10;;;Bateria
+E;Einhell;TE-CD18;2023;;450;;6000;5;;;Bateria
+E;Stanley;SDH700;2020;;700;;5000;3;;;Cable
