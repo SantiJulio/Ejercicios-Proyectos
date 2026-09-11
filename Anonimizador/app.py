@@ -1,8 +1,6 @@
 import streamlit as st
 import spacy
 import re
-import subprocess
-import sys
 
 # Configuración de la página (Debe ser la primera línea de Streamlit)
 st.set_page_config(
@@ -11,15 +9,10 @@ st.set_page_config(
     layout="wide"
 )
 
-# Carga optimizada del modelo de SpaCy con descarga síncrona controlada
+# Carga optimizada y directa del modelo instalado por entorno
 @st.cache_resource
 def load_nlp():
-    try:
-        return spacy.load("es_core_news_lg")
-    except OSError:
-        # Descarga el modelo usando el pipeline de ejecución nativo del sistema
-        subprocess.run([sys.executable, "-m", "spacy", "download", "es_core_news_lg"], check=True)
-        return spacy.load("es_core_news_lg")
+    return spacy.load("es_core_news_lg")
 
 nlp = load_nlp()
 
