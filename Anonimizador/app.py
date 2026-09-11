@@ -1,26 +1,26 @@
 import streamlit as st
 import spacy
 import re
-import os
 
-# Configuración de la página (Debe ser la primera línea de Streamlit)
+# Configuración de la página
 st.set_page_config(
     page_title="Anonimizador Judicial AI",
     page_icon="⚖️",
     layout="wide"
 )
 
-# Carga optimizada del modelo de SpaCy con descarga automática integrada
+# Estilo personalizado
+st.markdown("""
+    <style>
+    .main-title { color: #1E3A8A; font-size: 32px; font-weight: bold; margin-bottom: 20px; }
+    .subtitle { color: #4B5563; font-size: 18px; margin-bottom: 30px; }
+    </style>
+""", unsafe_allow_html=True)
+
+# Carga optimizada del modelo de SpaCy para evitar recargas lentas en Streamlit
 @st.cache_resource
 def load_nlp():
-    try:
-        # Intentamos cargar el modelo normalmente
-        return spacy.load("es_core_news_lg")
-    except OSError:
-        # Si no está instalado en la nube, forzamos su descarga por consola
-        with st.spinner("Instalando dependencias de lenguaje en el servidor (Solo la primera vez)..."):
-            os.system("python -m spacy download es_core_news_lg")
-        return spacy.load("es_core_news_lg")
+    return spacy.load("es_core_news_lg")
 
 nlp = load_nlp()
 
