@@ -1,20 +1,13 @@
 import streamlit as st
-import spacy
+from transformers import pipeline
 import re
 
-# Configuración de la página (Debe ser la primera línea de Streamlit)
+# Configuración de la página
 st.set_page_config(
     page_title="Anonimizador Judicial AI",
     page_icon="⚖️",
     layout="wide"
 )
-
-# Carga optimizada y directa del modelo instalado por entorno
-@st.cache_resource
-def load_nlp():
-    return spacy.load("es_core_news_lg")
-
-nlp = load_nlp()
 
 # Estilo personalizado (Colores institucionales azul/gris)
 st.markdown("""
@@ -24,23 +17,34 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# Cargamos el pipeline de NER optimizado para español de forma cacheada
+@st.cache_resource
+def load_ner_pipeline():
+    # Usamos un modelo robusto de reconocimiento de entidades en español
+    return pipeline("ner", model="mrm8488/bert-spanish-ner-model", aggregation_strategy="simple")
+
+ner_pipeline = load_ner_pipeline()
+
 def anonimizar_texto(texto: str) -> str:
-    """Función de anonimización"""
+    # 1. Regex para DNI y Correos
     patron_dni = r'\b\d{1,2}(?:\.\d{3}){2}\b|\b\d{7,8}\b'
     texto_anon = re.sub(patron_dni, "[DNI OCULTO]", texto)
     
     patron_email = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
     texto_anon = re.sub(patron_email, "[CORREO OCULTO]", texto_anon)
     
-    doc = nlp(texto_anon)
-    desplazamientos = []
+    # 2. IA para nombres de personas
+    entidades = ner_pipeline(texto_anon)
     
-    for ent in doc.ents:
-        if ent.label_ == "PER":
-            desplazamientos.append((ent.start_char, ent.end_char, "[SUJETO ANONIMIZADO]"))
+    # Filtrar solo entidades que correspondan a personas (PER)
+    desplazamientos = []
+    for ent in entidades:
+        if ent['entity_group'] == 'PER':
+            desplazamientos.append((ent['start'], ent['end'], "[SUJETO ANONIMIZADO]"))
             
+    # Reemplazar de atrás hacia adelante para mantener consistencia de índices
     texto_lista = list(texto_anon)
-    for start, end, reemplazo in sorted(desplazamientos, key=lambda x: x, reverse=True):
+    for start, end, reemplazo in sorted(desplazamientos, key=lambda x: x[0], reverse=True):
         texto_lista[start:end] = list(reemplazo)
         
     return "".join(texto_lista)
@@ -62,7 +66,7 @@ with col2:
     st.subheader("🔒 Resultado Anonimizado")
     if st.button("Procesar Documento", type="primary"):
         if texto_ingresado.strip():
-            with st.spinner("Analizando entidades con NLP..."):
+            with st.spinner("Analizando entidades con BERT IA..."):
                 resultado = anonimizar_texto(texto_ingresado)
             st.text_area("Texto listo para publicación:", value=resultado, height=300)
             st.download_button(label="📥 Descargar Texto Anonimizado", data=resultado, file_name="sentencia_anonimizada.txt", mime="text/plain")
