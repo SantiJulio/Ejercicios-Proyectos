@@ -1,0 +1,26 @@
+{% extends 'baseTemplate.html' %}
+
+{% block header %}Ejecutar Proceso de Asignacion de Evaluadores{% endblock %}
+
+{% block content %}
+    <div style="max-width: 600px; margin: 30px auto; background-color: #fff; padding: 25px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">    
+        <h2>Proceso de Asignacion de Evaluadores</h2>
+        <p style = "color: #666; line-height: 1.6;">
+            Al ejecutar este proceso, el sistema buscará automáticamente todos los trabajos de investigación con estado <strong>Pendiente</strong> que no tengan sus 3 evaluadores completos.
+        </p>
+        
+        <div style="background-color: #f8f9fa; border-left: 4px solid #377ba8; padding: 15px; margin: 20px 0; font-size: 0.95em;">
+            <ul style = "margin: 0; padding-left: 20px; color: #555;">
+                <li>Los evaluadores deben pertenecer a la misma area tematica del trabajo.</li>
+                <li>No se asignaran mas trabajos del limite maximo de cada evaluador.</li>
+                <li>Un evaluador no sera asignado dos veces al mismo trabajo.</li>        
+            </ul>    
+        </div>
+
+        <form action="{{ url_for('ejecutar_procesoA') }}" method="POST" style="text-align: center; margin-top: 25px;">
+            <button type="submit" style="background-color: #377ba8; color: white; border: none; padding: 12px 24px; font-size: 1.1em; border-radius: 4px; cursor: pointer; font-weight: bold;">
+                Ejecutar Proceso de Asignacion
+            </button>       
+        </form>
+    </div>    
+{% endblock %}        

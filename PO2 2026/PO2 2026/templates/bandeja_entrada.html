@@ -1,0 +1,54 @@
+{% extends 'baseTemplate.html' %}
+
+{% block header %}Bandeja de Entrada - Evaluador{% endblock %}
+
+{% block content %}
+    <h2>Bandeja de Entrada del Evaluador</h2>
+    <!-- Bloque superior con los datos personales del evaluador -->
+    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 4px solid #2a5298;">
+        <p><strong>Evaluador:</strong> {{ evaluador_logueado.titulo }} {{ evaluador_logueado.nombre }} {{ evaluador_logueado.apellido }}</p>
+        <p><strong>Área de Especialidad:</strong> {{ evaluador_logueado.area }}</p>
+    </div>
+
+    <h3>Trabajos Asignados para Revisión</h3>    
+    <!-- Evaluamos si la lista de tareas contiene elementos -->
+    {% if asignaciones %}
+        <table border="1" style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left;">
+            <thead>
+                <tr>
+                    <th>ID Trabajo</th>
+                    <th>Título de la Investigación</th>
+                    <th>Estado del Trabajo</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Recorremos cada asignación enviada desde app.py -->
+                {% for asignacion in asignaciones %}
+                    <tr>
+                        <!-- Navegamos los datos usando el backref del modelo del profesor -->
+                        <td>{{ asignacion.trabajo.id }}</td>
+                        <td>{{ asignacion.trabajo.titulo }}</td>
+                        <td>{{ asignacion.trabajo.estado }}</td>
+                        <td>
+                            <!-- Verificamos si el artículo adjuntó un documento físico -->
+                            {% if asignacion.trabajo.archivo_nombre %}
+                                <a href="{{ url_for('descargar_archivo', filename=asignacion.trabajo.archivo_nombre) }}">
+                                    📥 Descargar Trabajo
+                                </a>
+                            {% else %}
+                                <span style="color: #999; font-style: italic;">Sin archivo</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <!-- Mensaje alternativo si la lista de asignaciones viene vacía en la BD -->
+        <p style="color: #666; font-style: italic; margin-top: 15px;">Actualmente no tienes ningún trabajo asignado para evaluar.</p>
+    {% endif %}
+
+    <br>
+    <p><a href="{{ url_for('inicio') }}">Volver al Inicio</a></p>
+{% endblock %}

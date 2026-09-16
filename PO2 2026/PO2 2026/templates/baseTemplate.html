@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block header %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    </head>
+
+    <body>
+        <header>
+            <h1>Gestion del Congreso</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('inicio')}}">Inicio</a></li>
+                <li><a href="{{ url_for('enviar_trabajo')}}">Enviar Trabajo</a></li>
+                <li><a href="{{ url_for('consultar_trabajo') }}">Consultar mi Trabajo</a></li>
+                
+                <!-- Si NO hay nadie logueado, se muestra la opción de Login -->
+                {% if not session.get('usuario_id') %}
+                    <li><a href="{{ url_for('login') }}">Iniciar Sesión</a></li>
+                {% endif %}
+
+                <!-- Si el usuario logueado es un Organizador -->
+                {% if session.get('usuario_rol') == 'organizador' %}
+                    <li><a href="{{ url_for('ejecutar_procesoA')}}">Ejecutar Proceso de Asignacion</a></li>
+                    <li><a href="{{ url_for('logout') }}" style="color: #c53030;">Cerrar Sesión (Org)</a></li>
+                {% endif %}
+
+                <!-- Si el usuario logueado es un Evaluador -->
+                {% if session.get('usuario_rol') == 'evaluador' %}
+                    <li><a href="{{ url_for('bandeja_entrada')}}">Bandeja de Entrada</a></li>
+                    <li><a href="{{ url_for('logout') }}" style="color: #c53030;">Cerrar Sesión (Eval)</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <main class="container">
+            {% block content %}{% endblock %} 
+        </main>
+    </body>
+</html>
