@@ -1,0 +1,279 @@
+/* Variables de color institucionales y analíticas */
+:root {
+    --bg-main: #0f172a; /* Fondo dark premium */
+    --bg-card: #1e293b; /* Tarjetas oscuras */
+    --primary: #38bdf8; /* Azul cielo brillante */
+    --text-dark: #f8fafc; /* Texto claro */
+    --text-muted: #94a3b8;
+    --border: #334155;
+    
+    --success: #34d399;
+    --warning: #fbbf24;
+    --info: #38bdf8;
+    
+    --bar-bg: #475569;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    padding: 2rem;
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+.dashboard-header {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+}
+
+.dashboard-header h1 {
+    color: var(--primary);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Grid de Indicadores (KPIs) */
+.kpis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.kpi-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid var(--primary);
+}
+
+.kpi-card.warning { border-top-color: var(--warning); }
+.kpi-card.success { border-top-color: var(--success); }
+.kpi-card.info { border-top-color: var(--info); }
+
+.kpi-card h3 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+}
+
+.kpi-card p {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Grid de Gráficos */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.chart-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.chart-container h3 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* --- MOTOR DE BARRAS FLEXBOX (CSS NATIVO) --- */
+.barras-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.fila-grafico {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.info-grafico {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.nombre-etiqueta {
+    color: var(--text-muted);
+}
+
+.contenedor-progreso {
+    background-color: var(--bar-bg);
+    width: 100%;
+    height: 14px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative; /* Asegura el contexto de capas */
+}
+
+.barra-relleno {
+    display: block; 
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.8s ease-in-out;
+    background: linear-gradient(90deg, #0284c7, #38bdf8) !important; 
+}
+
+/* Variación de color verde para el gráfico de fueros */
+#chartFuero .barra-relleno {
+    background: linear-gradient(90deg, #059669, #34d399) !important; 
+}
+
+
+/* Barra de Controles Interactivos */
+.controles-dashboard {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.control-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 350px;
+}
+
+.control-grupo label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.control-grupo select {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    border: 1px solid var(--border);
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.control-grupo select:focus {
+    border-color: var(--primary);
+}
+/* --- ESTILOS DE LA TABLA DE GESTIÓN --- */
+.tabla-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#buscadorExp {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    border: 1px solid var(--border);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 350px;
+    outline: none;
+}
+
+#buscadorExp:focus {
+    border-color: var(--primary);
+}
+
+.tabla-responsive {
+    overflow-x: auto;
+    max-height: 400px; /* Le da scroll vertical si hay muchos registros */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background-color: var(--bg-main);
+    color: var(--primary);
+    font-weight: 600;
+    position: sticky;
+    top: 0; /* Mantiene la cabecera fija al hacer scroll */
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Botones de acción dentro de la tabla */
+.btn-tabla {
+    background-color: transparent;
+    color: var(--info);
+    border: 1px solid var(--info);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-tabla:hover {
+    background-color: var(--info);
+    color: var(--bg-main);
+}

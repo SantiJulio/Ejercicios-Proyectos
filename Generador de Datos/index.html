@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Analítica Judicial - San Juan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>📊 Sistema de Analítica & Control de Causas</h1>
+            <p>Monitoreo de eficiencia procesal y acumulación de expedientes - Poder Judicial San Juan</p>
+        </header>
+        
+        <!-- BARRA DE CONTROLES E INTERACTIVIDAD -->
+        <section class="controles-dashboard">
+            <div class="control-grupo">
+                <label for="filtroFuero">⚖️ Filtrar por Fuero:</label>
+                <select id="filtroFuero">
+                    <option value="TODOS">Todos los Fueros de San Juan</option>
+                    <option value="Familia">Familia</option>
+                    <option value="Laboral">Laboral</option>
+                    <option value="Penal (Colegio de Jueces)">Penal</option>
+                    <option value="Civil, Comercial y Minería">Civil, Comercial y Minería</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Tarjetas de Indicadores (KPIs) -->
+        <section class="kpis-grid">
+            <div class="kpi-card">
+                <h3>Total Expedientes</h3>
+                <p id="kpi-total">-</p>
+            </div>
+            <div class="kpi-card warning">
+                <h3>En Trámite</h3>
+                <p id="kpi-tramite">-</p>
+            </div>
+            <div class="kpi-card success">
+                <h3>Causas Resueltas</h3>
+                <p id="kpi-resueltas">-</p>
+            </div>
+            <div class="kpi-card info">
+                <h3>Promedio Días Activo</h3>
+                <p id="kpi-dias">-</p>
+            </div>
+        </section>
+
+        <!-- Sección de Gráficos Analíticos -->
+        <section class="charts-grid">
+            <div class="chart-container">
+                <h3>Distribución de Causas por Fuero</h3>
+                <div id="chartFuero" class="barras-flex-container">
+                    <!-- Se inyecta dinámicamente desde JS -->
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3>Duración Promedio (Días) por Tipo de Proceso</h3>
+                <div id="chartProceso" class="barras-flex-container">
+                    <!-- Se inyecta dinámicamente desde JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: LISTADO Y GESTIÓN DE EXPEDIENTES -->
+        <section class="tabla-container">
+            <div class="tabla-header">
+                <h3>📋 Listado de Expedientes en Tiempo Real</h3>
+                <input type="text" id="buscadorExp" placeholder="🔍 Buscar por Nro. de Expediente (ej: 42125)...">
+            </div>
+            
+            <div class="tabla-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nro. Expediente</th>
+                            <th>Fuero</th>
+                            <th>Juzgado Radicación</th>
+                            <th>Tipo de Proceso</th>
+                            <th>Fecha Inicio</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

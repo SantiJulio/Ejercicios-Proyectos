@@ -1,0 +1,55 @@
+{
+    "kpis": {
+        "total_causas": 1000,
+        "en_tramite": 200,
+        "resueltas": 204,
+        "promedio_dias_resolucion": 410.7
+    },
+    "graficos": {
+        "causas_por_fuero": {
+            "Familia": 256,
+            "Laboral": 254,
+            "Penal (Colegio de Jueces)": 247,
+            "Civil, Comercial y Minería": 243
+        },
+        "estados_por_fuero": {
+            "Civil, Comercial y Minería": {
+                "Archivado": 48,
+                "En Trámite": 42,
+                "Para Sentencia": 49,
+                "Resuelto": 51,
+                "Suspendido": 53
+            },
+            "Familia": {
+                "Archivado": 50,
+                "En Trámite": 59,
+                "Para Sentencia": 54,
+                "Resuelto": 50,
+                "Suspendido": 43
+            },
+            "Laboral": {
+                "Archivado": 50,
+                "En Trámite": 51,
+                "Para Sentencia": 48,
+                "Resuelto": 61,
+                "Suspendido": 44
+            },
+            "Penal (Colegio de Jueces)": {
+                "Archivado": 59,
+                "En Trámite": 48,
+                "Para Sentencia": 37,
+                "Resuelto": 42,
+                "Suspendido": 61
+            }
+        },
+        "dias_por_proceso": {
+            "Amparo": 418.2,
+            "Daños y Perjuicios": 378.1,
+            "Despido": 398.6,
+            "Divorcio": 441.9,
+            "Homicidio": 403.8,
+            "Hurto": 416.6,
+            "Sucesorio": 422.3
+        }
+    }
+}
